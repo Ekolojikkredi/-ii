@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="recycle-symbol">♻️</span> Ekolojik Kredi
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sol Menü -->
+        <nav class="sidebar">
+            <ul>
+                <li><button class="menu-btn" id="homeBtn">Ana Sayfa</button></li>
+                <li><button class="menu-btn" id="registerBtn">Kayıt Ol</button></li>
+                <li><button class="menu-btn" id="dataEntryBtn">Veri Girişi</button></li>
+                <li><button class="menu-btn" id="viewDataBtn">Veri Görüntüle</button></li>
+                <li><button class="menu-btn" id="aboutBtn">Nedir?</button></li>
+                <li><button class="menu-btn" id="contactBtn">Bize Ulaşın</button></li>
+            </ul>
+        </nav>
+
+        <!-- Sağ İçerik Alanı -->
+        <div class="main-content">
+            <div id="homeContent" class="content-section">
+                <h2>Ana Sayfa</h2>
+                <p>Hoş geldiniz! Ekolojik Kredi sistemimize katılarak geri dönüşüm yapın ve puan kazanın.</p>
+            </div>
+
+            <!-- Kayıt Ol -->
+            <div id="registerContent" class="content-section hidden">
+                <h2>Kayıt Ol</h2>
+                <form id="registrationForm">
+                    <label for="studentName">Adınız:</label>
+                    <input type="text" id="studentName" required>
+                    <label for="studentEmail">E-posta:</label>
+                    <input type="email" id="studentEmail" required>
+                    <label for="studentPhone">Telefon Numarası:</label>
+                    <input type="tel" id="studentPhone" required>
+                    <label for="studentSchool">Okul Adı:</label>
+                    <input type="text" id="studentSchool" required>
+                    <button type="submit" class="action-btn">Kayıt Ol</button>
+                </form>
+            </div>
+
+            <!-- Veri Girişi -->
+            <div id="dataEntryContent" class="content-section hidden">
+                <h2>Veri Girişi</h2>
+                <form id="waste-entry-form">
+                    <label for="wasteType">Atık Türü:</label>
+                    <select id="wasteType" required>
+                        <option value="plastik">Plastik</option>
+                        <option value="kağıt">Kağıt</option>
+                        <option value="cam">Cam</option>
+                        <option value="metal">Metal</option>
+                        <option value="elektronik">Elektronik</option>
+                        <option value="yağ">Yağ</option>
+                        <option value="tekstil">Tekstil</option>
+                        <option value="pil">Pil</option>
+                    </select>
+                    <label for="wasteAmount">Atık Miktarı (kg):</label>
+                    <input type="number" id="wasteAmount" required>
+                    <button type="submit" class="action-btn">Kaydet</button>
+                </form>
+            </div>
+
+            <!-- Veri Görüntüle -->
+            <div id="studentDataContent" class="content-section hidden">
+                <h2>Veri Görüntüle</h2>
+                <p id="totalWaste">Toplam Atık: 0 kg</p>
+                <p id="totalPoints">Toplam Puan: 0</p>
+                <p id="wasteTypes">Atık Türü: -</p>
+                <button class="action-btn" id="backBtn">Ana Sayfaya Dön</button>
+            </div>
+
+            <!-- Nedir? -->
+            <div id="aboutContent" class="content-section hidden">
+                <h2>Ekolojik Kredi Nedir?</h2>
+                <p>Ekolojik Kredi, geri dönüşüm yapan bireyleri ödüllendiren bir sistemdir. Atık türlerine göre kredi puanları kazanabilirsiniz.</p>
+            </div>
+
+            <!-- Bize Ulaşın -->
+            <div id="contactContent" class="content-section hidden">
+                <h2>Bize Ulaşın</h2>
+                <p>Email: ekolojikkreditubitak@gmail.com</p>
+                <p>Adres: İzmir Torbalı Anadolu Lisesi</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Torbalı Anadolu Lisesi Coğrafya Proje Ödevi Ekolojik Kredi Örnek Sitesidir.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
